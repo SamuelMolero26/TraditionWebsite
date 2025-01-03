@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The 12th Man</title>
+        <!--Designed by Samuel Molero and Edgar Macareno. Fall semester '24 -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+        
+    <body bgcolor='#e0e2e3'>
+        
+
+        <header> 
+        <table align="center" width="800px" cellpadding="15px"></table>
+            <tr>
+            <td bgcolor="#500001">
+            
+                <div class="header-content">
+                    <a href="index.html">
+                        <img src="img/A&M_Logo.jpg" class="logo" alt="A&M Logo">
+                    </a>
+                    <h1>
+                        <span class="header-font header-spacing header-font-size">  Texas A&M University</span>
+                        <br>
+                        <center>
+                            <span class="br-font"> 12th Man </span>
+                        </center>
+                    </h1>
+            </tr>
+            <center>
+                </div>
+                <h2 class = "by-font" > <a href = 'groupmemeber.html' > <i> Designed by: </i>  </a> <i> Samuel Molero & Edgar Macareno </i>
+                    <br>
+                </h2>
+            </center>
+                <center>
+                    <h3 class = "by-font" style = "margin-bottom: -1px;">10/24/24</h3> 
+                </center>
+            
+        </table>
+        </header>      
+        <p>
+            
+        </p>
+        <nav style = "margin-top: 10px">
+            <hr>
+            <a href = 'tradition.html'> <i> The 12th Man</i></a> |
+            <a href ='groupmemeber.html'> <i>Group members</i></a> |
+            <a href= 'newtradition.html' ><i> New Tradition</i></a> 
+            <hr>
+        </nav>
+       
+            <!-- Slideshow section  -->
+        
+            <div class="image-slider-front">
+                <div class="image-block fade">
+                    <img src="img/12th1.jpg" style="width:100%">
+                    <p></p>
+                    <div class="image-text"><i>"12th Man flag during the aggie football game"</i></div>
+                    <p></p>
+                </div>
+                <div class="image-block fade">
+                    <img src="img/12th2.jpg" alt = "12th_statue_kylefield" style="width:100%">
+                    <p></p>
+                    <div class="image-text" alt = "12thman_statue"><i>"12th man statue outside of Kyle field"</i></div>
+                    <p></p>
+                </div>
+                <div class="image-block fade">
+                    <img src="img/12th3.jpg"  alt = "12thman_player" style="width:100%">
+                    <p></p>
+                    <div class="image-text"><i>"The Twelfth Man" statue outside of the rudder fountain</i></div>
+                    <p></p>
+                </div>
+    
+                <a class="prev" onclick="nextSlides(-1)">&#10094;</a>
+                <a class="next" onclick="nextSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        
+
+        <script>
+            // Spagethi code for image slider --- I know... This is the best I could do
+            let Index = 1;
+            showSlides(Index);
+
+            function nextSlides(n) {
+                showSlides(Index += n);
+            }
+
+            function tempslide(n) {
+                showSlides(Index = n)
+            }
+
+            function showSlides(n) {
+                let i;
+                let curr_slide = document.getElementsByClassName("image-block"); // grab image-block
+                let dots = document.getElementsByClassName("dot") //grab the dot atribute
+                
+                // it aint much but its honest work
+                if(n  > curr_slide.length) {Index = 1}
+                if(n < 1) { Index  = curr_slide.length}
+
+                for(i = 0; i < curr_slide.length; i++){
+                    curr_slide[i].style.display = "none";
+                }
+
+                for( i = 0; i < dots.length; i++){
+                    dots[i].className = dots[i].className.replace(" active", "");
+                } // for dot movement
+
+                curr_slide[Index-1].style.display = "block";
+                dots[Index-1].className += " active";
+            }   
+        </script>
+
+       <p class = "paragraph-text">
+            <a href = "https://www.youtube.com/watch?v=AQ75ROVBlko&pp=ygURdGhlIDEydGggbWFuIHRhbXU%3D">
+                <b> What started in <u style = 'color: #500001'>1922</u>, as a sign of sportsmanship, has become one of the greatest traditions in college athletics. 
+                A tradition goes beyond a game day ritual, demonstrating that sportsmanship goes beyond the game field.  It started when <i style = 'color: #500001'>E.king Gill</i>, a former Aggie football player, 
+                played in the Dixie Classic after being called down from the stands. He stood on the sidelines ready to play if the team ever needed him, demonstrating his commitment not only to the institution but to his peers and student body. 
+                To honor such commitment, the entire student body became the Twelfth Man, standing during the entire game to show their support, always waiting to be called upon if needed. The 12th man tradition is a unique and outstanding showcase of Aggie's' 
+                unity, loyalty, and willingness to serve selflessly when called to do so. Beyond being the most visible throughout game days, the <u style = 'color: #500001'> 12th man </u> reminds every Aggie of 
+                their commitment and spirit through generosity and service to their peers, community, and the world. When talking about the 12th man, it is safe to say that more than a tradition is a foundational principle to the beliefs, that define a true Aggie. 
+                </b>
+            </a>    
+        </p>
+
+        <center>
+            <h1 style = "font-family:Open Sans, sans-serif; font-size: 1.3rem; color: #500001" > <u><b> Important details about the tradition: </b> </u></h1>
+        </center>
+
+        <table class = "table-style">
+            <tr>
+                <th> The 12th Man </th>
+                <th> January 2 , 1922 </th>
+                <th> E. King Gill </th>
+            </tr>
+            <tr>
+                <td> <a href="https://12thman.tamu.edu/ "> Celebrating 100 years of the 12th Man</a> </td>
+                <td> <a href = "https://12thman.com/facilities/kyle-field/1" ></a> Kyle field </td>
+                <td>  Showcases Aggies unity, loyalty, and willingness to serve. </td>
+            </tr>
+            <tr>
+                <td><a href = "https://www.tamu.edu/campus-community/traditions/gameday/yell-leaders.html"> Yell leaders</a></td>
+                <td><a href = "https://myaggienation.com/campus_evolution/athletic_venue_history/kyle-field/article_91f7d342-10b6-11e3-be98-001a4bcf887a.html"> History of Kyle field</a></td>
+                <td> <a href = " https://www.tamu.edu/campus-community/traditions/gameday/aggie-songs.html"> Aggie War Hymn</a></td>
+            </tr>
+           
+
+        </table>
+
+        </td>
+
+    </body>
+    <p>
+
+
+
+    </p>
+    <footer >
+        <a href="mailto:samueljosemolero@tamu.edu" > Get in Touch: </a>
+        <hr class = "footer-hr">
+    </footer>
+</html>
